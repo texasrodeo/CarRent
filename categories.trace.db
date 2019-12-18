@@ -1,0 +1,899 @@
+2019-11-24 16:51:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CARS (ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, BRAND VARCHAR (100) NOT NULL,INFO VARCHAR (100) NOT NULL,PRICE INT (100) NOT NULL,AVAILABILITY BOOLEAN (100) NOT NULL,)[*]"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CARS (ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, BRAND VARCHAR (100) NOT NULL,INFO VARCHAR (100) NOT NULL,PRICE INT (100) NOT NULL,AVAILABILITY BOOLEAN (100) NOT NULL,)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL,) [42001-200]
+2019-11-24 16:51:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORIES" не найдена
+Table "CATEGORIES" not found; SQL statement:
+select * from categories [42102-200]
+2019-11-24 16:54:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CARS (ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, BRAND VARCHAR (100) NOT NULL,INFO VARCHAR (100) NOT NULL,PRICE INT (100) NOT NULL,AVAILABILITY BOOLEAN (100) NOT NULL,)[*]"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CARS (ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, BRAND VARCHAR (100) NOT NULL,INFO VARCHAR (100) NOT NULL,PRICE INT (100) NOT NULL,AVAILABILITY BOOLEAN (100) NOT NULL,)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL,) [42001-200]
+2019-11-24 16:54:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" не найдена
+Table "CARS" not found; SQL statement:
+select * from cars [42102-200]
+2019-11-24 17:08:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" не найдена
+Table "CARS" not found; SQL statement:
+select * from cars [42102-200]
+2019-11-24 17:13:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CARS (ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, BRAND VARCHAR (100) NOT NULL,INFO VARCHAR (100) NOT NULL,PRICE INT (100) NOT NULL,AVAILABILITY BOOLEAN (100) NOT NULL,)[*]"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CARS (ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, BRAND VARCHAR (100) NOT NULL,INFO VARCHAR (100) NOT NULL,PRICE INT (100) NOT NULL,AVAILABILITY BOOLEAN (100) NOT NULL,)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL,) [42001-200]
+2019-11-24 17:30:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-24 18:32:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-24 18:53:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-24 18:53:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "BRAND" не найден
+Column "BRAND" not found; SQL statement:
+INSERT INTO cars(brand, info, price, availability)VALUES (brand, info, price, true) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at persestance.DBAutoPark.executeInsertQuery(DBAutoPark.java:168)
+	at persestance.DBAutoPark.add(DBAutoPark.java:64)
+	at service.AutoparkService.addCar(AutoparkService.java:24)
+	at View.AutoParkView.addCar(AutoParkView.java:28)
+	at View.AdminPanel.addCar(AdminPanel.java:15)
+	at View.MainMenu.show(MainMenu.java:54)
+	at Main.main(Main.java:6)
+2019-11-24 18:54:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-24 18:55:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "BRAND" не найден
+Column "BRAND" not found; SQL statement:
+INSERT INTO cars(Brand, info, price, availability)VALUES (brand, info, price, true) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at persestance.DBAutoPark.executeInsertQuery(DBAutoPark.java:168)
+	at persestance.DBAutoPark.add(DBAutoPark.java:64)
+	at service.AutoparkService.addCar(AutoparkService.java:24)
+	at View.AutoParkView.addCar(AutoParkView.java:28)
+	at View.AdminPanel.addCar(AdminPanel.java:15)
+	at View.MainMenu.show(MainMenu.java:54)
+	at Main.main(Main.java:6)
+2019-11-24 18:56:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-24 18:56:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO CARS(BRAND, INFO, PRICE, AVAILABILITY)VALUES (ASD, ;[*] AD, 123, TRUE)"; ожидалось "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "INSERT INTO CARS(BRAND, INFO, PRICE, AVAILABILITY)VALUES (ASD, ;[*] AD, 123, TRUE)"; expected "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+INSERT INTO cars(brand, info, price, availability)VALUES (asd, ; ad, 123, true) [42001-200]
+2019-11-24 18:58:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-24 18:58:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO CARS(BRAND, INFO, PRICE, AVAILABILITY)VALUES (AS, ;[*] ASD, 1000, TRUE)"; ожидалось "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "INSERT INTO CARS(BRAND, INFO, PRICE, AVAILABILITY)VALUES (AS, ;[*] ASD, 1000, TRUE)"; expected "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+INSERT INTO cars(brand, info, price, availability)VALUES (as, ; asd, 1000, true) [42001-200]
+2019-11-24 19:02:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-24 19:02:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ASD" не найден
+Column "ASD" not found; SQL statement:
+INSERT INTO cars(brand, info, price, availability)VALUES (asd,  asd, 123, true) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at persestance.DBAutoPark.executeInsertQuery(DBAutoPark.java:168)
+	at persestance.DBAutoPark.add(DBAutoPark.java:64)
+	at service.AutoparkService.addCar(AutoparkService.java:24)
+	at View.AutoParkView.addCar(AutoParkView.java:28)
+	at View.AdminPanel.addCar(AdminPanel.java:15)
+	at View.MainMenu.show(MainMenu.java:54)
+	at Main.main(Main.java:6)
+2019-11-24 19:08:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Метод разрешен только для запросов. Используйте execute или executeUpdate вместо executeQuery
+Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+INSERT INTO cars(brand, info, price, availability)VALUES ('asd', 'asd', 1000, true) [90002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.Prepared.query(Prepared.java:231)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:285)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:85)
+	at persestance.DBAutoPark.executeInsertQuery(DBAutoPark.java:168)
+	at persestance.DBAutoPark.add(DBAutoPark.java:64)
+	at service.AutoparkService.addCar(AutoparkService.java:24)
+	at View.AutoParkView.addCar(AutoParkView.java:28)
+	at View.AdminPanel.addCar(AdminPanel.java:15)
+	at View.MainMenu.show(MainMenu.java:54)
+	at Main.main(Main.java:6)
+2019-11-25 15:53:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DELETE FROM CARS WHERE ID LIKE4[*]"
+Syntax error in SQL statement "DELETE FROM CARS WHERE ID LIKE4[*]"; SQL statement:
+DELETE FROM cars WHERE id like4 [42000-200]
+2019-11-25 15:55:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DELETE FROM CARS WHERE ID =[*]"; ожидалось "ALL, ANY, SOME"
+Syntax error in SQL statement "DELETE FROM CARS WHERE ID =[*]"; expected "ALL, ANY, SOME"; SQL statement:
+DELETE FROM cars WHERE id = [42001-200]
+2019-11-25 15:56:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DELETE FROM CARS WHERE ID =[*]"; ожидалось "ALL, ANY, SOME"
+Syntax error in SQL statement "DELETE FROM CARS WHERE ID =[*]"; expected "ALL, ANY, SOME"; SQL statement:
+DELETE FROM cars WHERE id = [42001-200]
+2019-11-25 16:00:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DELETE FROM CARS WHERE ID = [*]"; ожидалось "ALL, ANY, SOME"
+Syntax error in SQL statement "DELETE FROM CARS WHERE ID = [*]"; expected "ALL, ANY, SOME"; SQL statement:
+DELETE FROM cars WHERE id =  [42001-200]
+2019-11-25 16:02:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-25 16:03:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DELETE FROM CARS WHERE ID = [*]"; ожидалось "ALL, ANY, SOME"
+Syntax error in SQL statement "DELETE FROM CARS WHERE ID = [*]"; expected "ALL, ANY, SOME"; SQL statement:
+DELETE FROM cars WHERE id =  [42001-200]
+2019-11-25 16:09:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CONTRACTS" уже существует
+Table "CONTRACTS" already exists; SQL statement:
+CREATE TABLE contracts (id INT NOT NULL PRIMARY KEY auto_increment, created_at DATE (100) NOT NULL,ends_at DATE (100) NOT NULL,client_id INT (100) NOT NULL,admin INT (100) NOT NULL,car INT (100) NOT NULL,is_approved BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-25 16:11:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CONTRACTS" уже существует
+Table "CONTRACTS" already exists; SQL statement:
+CREATE TABLE contracts (id INT NOT NULL PRIMARY KEY auto_increment, created_at DATE (100) NOT NULL,ends_at DATE (100) NOT NULL,client_id INT (100) NOT NULL,admin INT (100) NOT NULL,car INT (100) NOT NULL,is_approved BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-25 16:12:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CONTRACTS" уже существует
+Table "CONTRACTS" already exists; SQL statement:
+CREATE TABLE contracts (id INT NOT NULL PRIMARY KEY auto_increment, created_at DATE (100) NOT NULL,ends_at DATE (100) NOT NULL,client_id INT (100) NOT NULL,admin INT (100) NOT NULL,car INT (100) NOT NULL,is_approved BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-25 16:13:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-25 16:14:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-25 16:28:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE  CARS SET ID=4 BRAND[*]=AS INFO=; AS PRICE=12 AVAILABILITY=TRUE WHERE ID =4"
+Syntax error in SQL statement "UPDATE  CARS SET ID=4 BRAND[*]=AS INFO=; AS PRICE=12 AVAILABILITY=TRUE WHERE ID =4"; SQL statement:
+UPDATE  cars set id=4 brand=as info=; as price=12 availability=true where id =4 [42000-200]
+2019-11-25 16:32:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE  CARS SET ID=4 BRAND[*]=AS INFO=ASD PRICE=12 AVAILABILITY=TRUE WHERE ID =4"
+Syntax error in SQL statement "UPDATE  CARS SET ID=4 BRAND[*]=AS INFO=ASD PRICE=12 AVAILABILITY=TRUE WHERE ID =4"; SQL statement:
+UPDATE  cars set id=4 brand=as info=asd price=12 availability=true where id =4 [42000-200]
+2019-11-25 16:34:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE CARS SET ID=3 BRAND[*]=ASD INFO=AS PRICE=12 AVAILABILITY=TRUE WHERE ID=3"
+Syntax error in SQL statement "UPDATE CARS SET ID=3 BRAND[*]=ASD INFO=AS PRICE=12 AVAILABILITY=TRUE WHERE ID=3"; SQL statement:
+UPDATE cars set id=3 brand=asd info=as price=12 availability=true where id=3 [42000-200]
+2019-11-25 16:36:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE CARS SET BRAND=ASD INFO[*]=ASD PRICE=123 AVAILABILITY=TRUE WHERE ID=3"
+Syntax error in SQL statement "UPDATE CARS SET BRAND=ASD INFO[*]=ASD PRICE=123 AVAILABILITY=TRUE WHERE ID=3"; SQL statement:
+UPDATE cars set brand=asd info=asd price=123 availability=true where id=3 [42000-200]
+2019-11-25 16:49:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE CARS SET BRAND=AS INFO[*]=ASD PRICE=1200 AVAILABILITY=TRUE WHERE ID=1"
+Syntax error in SQL statement "UPDATE CARS SET BRAND=AS INFO[*]=ASD PRICE=1200 AVAILABILITY=TRUE WHERE ID=1"; SQL statement:
+UPDATE cars set brand=as info=asd price=1200 availability=true where id=1 [42000-200]
+2019-11-25 16:51:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE CARS SET BRAND=ASD INFO[*]=AS PRICE=1200 AVAILABILITY=TRUE WHERE ID LIKE1"
+Syntax error in SQL statement "UPDATE CARS SET BRAND=ASD INFO[*]=AS PRICE=1200 AVAILABILITY=TRUE WHERE ID LIKE1"; SQL statement:
+UPDATE cars set brand=asd info=as price=1200 availability=true where id like1 [42000-200]
+2019-11-25 16:51:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE CARS SET BRAND=AS INFO[*]=AS PRICE=1200 AVAILABILITY=TRUE WHERE ID LIKE 1"
+Syntax error in SQL statement "UPDATE CARS SET BRAND=AS INFO[*]=AS PRICE=1200 AVAILABILITY=TRUE WHERE ID LIKE 1"; SQL statement:
+UPDATE cars set brand=as info=as price=1200 availability=true where id like 1 [42000-200]
+2019-11-25 16:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ASD" не найден
+Column "ASD" not found; SQL statement:
+UPDATE cars set brand=asd ,info=ad ,price=20 ,availability=true where id like 1 [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Update.prepare(Update.java:275)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBAutoPark.executeQuery(DBAutoPark.java:198)
+	at persestance.DBAutoPark.alter(DBAutoPark.java:93)
+	at persestance.DBAutoPark.alter(DBAutoPark.java:11)
+	at service.AutoparkService.updateCar(AutoparkService.java:29)
+	at View.AutoParkView.updateCar(AutoParkView.java:35)
+	at View.AdminPanel.updateCar(AdminPanel.java:23)
+	at View.MainMenu.show(MainMenu.java:69)
+	at Main.main(Main.java:6)
+2019-11-25 16:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ASD" не найден
+Column "ASD" not found; SQL statement:
+UPDATE cars set brand=asd, info=ad, price=100, availability=true where id like 1 [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Update.prepare(Update.java:275)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBAutoPark.executeQuery(DBAutoPark.java:198)
+	at persestance.DBAutoPark.alter(DBAutoPark.java:93)
+	at persestance.DBAutoPark.alter(DBAutoPark.java:11)
+	at service.AutoparkService.updateCar(AutoparkService.java:29)
+	at View.AutoParkView.updateCar(AutoParkView.java:35)
+	at View.AdminPanel.updateCar(AdminPanel.java:23)
+	at View.MainMenu.show(MainMenu.java:69)
+	at Main.main(Main.java:6)
+2019-11-25 19:17:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USERS(NAME, PHONE_NUMBER, ROLE)VALUES ('as', 'as', ADMIN[*]"; ожидалось "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO USERS(NAME, PHONE_NUMBER, ROLE)VALUES ('as', 'as', ADMIN[*]"; expected "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO users(name, phone_number, role)VALUES ('as', 'as', admin [42001-200]
+2019-11-25 19:18:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USERS(NAME, PHONE_NUMBER, ROLE)VALUES ('asd', 'as', 'admin'[*]"; ожидалось "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO USERS(NAME, PHONE_NUMBER, ROLE)VALUES ('asd', 'as', 'admin'[*]"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO users(name, phone_number, role)VALUES ('asd', 'as', 'admin' [42001-200]
+2019-11-25 22:42:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT ID FROM USERS WHERE NAME='as',[*] PHONE_NUMBER='asd', ROLE='admin'"
+Syntax error in SQL statement "SELECT ID FROM USERS WHERE NAME='as',[*] PHONE_NUMBER='asd', ROLE='admin'"; SQL statement:
+select id from users where name='as', phone_number='asd', role='admin' [42000-200]
+2019-11-26 13:43:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ADMIN_ID" не найден
+Column "ADMIN_ID" not found; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id, car_id, is_approved)VALUES ('Wed Sep 18 00:00:00 MSK 2019', 'Fri Sep 20 00:00:00 MSK 2019', 12', null', 1, false [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:69)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:126)
+	at Main.main(Main.java:6)
+2019-11-26 13:56:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ADMIN_ID" не найден
+Column "ADMIN_ID" not found; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id, car_id, is_approved)VALUES ('Wed Sep 18 00:00:00 MSK 2019', 'Fri Sep 20 00:00:00 MSK 2019', 12', null', 1, false [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:69)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:126)
+	at Main.main(Main.java:6)
+2019-11-26 13:57:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ADMIN_ID" не найден
+Column "ADMIN_ID" not found; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id, car_id, is_approved)VALUES ('Wed Sep 18 00:00:00 MSK 2019', 'Fri Sep 20 00:00:00 MSK 2019', 12, 1, 1, false [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:69)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:126)
+	at Main.main(Main.java:6)
+2019-11-26 13:59:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ADMIN_ID" не найден
+Column "ADMIN_ID" not found; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id, car_id, is_approved)VALUES ('Wed Sep 18 00:00:00 MSK 2019', 'Fri Sep 20 00:00:00 MSK 2019', 12, 1, 1, false [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:69)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:126)
+	at Main.main(Main.java:6)
+2019-11-26 13:59:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ADMIN_ID" не найден
+Column "ADMIN_ID" not found; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id, car_id, is_approved)VALUES ('Wed Sep 18 00:00:00 MSK 2019', 'Fri Sep 20 00:00:00 MSK 2019', 12, 1, 1, false) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:69)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:126)
+	at Main.main(Main.java:6)
+2019-11-26 14:03:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ADMIN_ID" не найден
+Column "ADMIN_ID" not found; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id, car_id, is_approved)VALUES ('Wed Sep 18 00:00:00 MSK 2019', 'Fri Sep 20 00:00:00 MSK 2019', 12, 1, 1, false) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:69)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:126)
+	at Main.main(Main.java:6)
+2019-11-26 14:10:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ADMIN_ID" не найден
+Column "ADMIN_ID" not found; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id, car_id, is_approved)VALUES ('2019-09-10', '2019-10-10', 12, 1, 1, false) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:69)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:129)
+	at Main.main(Main.java:6)
+2019-11-26 14:12:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ADMIN_ID" не найден
+Column "ADMIN_ID" not found; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id, car_id, is_approved)VALUES ('2019-09-10', '2019-10-10', 12, 1, 1, false) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:69)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:129)
+	at Main.main(Main.java:6)
+2019-11-26 14:13:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "CAR_ID" не найден
+Column "CAR_ID" not found; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, car_id, is_approved)VALUES ('2019-09-10', '2019-10-10', 12, 1, 1, false) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:69)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:129)
+	at Main.main(Main.java:6)
+2019-11-26 14:16:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" не найдена
+Table "CARS" not found; SQL statement:
+INSERT INTO cars(brand, info, price, availability)VALUES ('volvo', 'Качественная машина, 200 л.с', 2000, true) [42102-200]
+2019-11-26 14:16:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" не найдена
+Table "CARS" not found; SQL statement:
+DROP table cars [42102-200]
+2019-11-26 14:16:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+select * from users [42102-200]
+2019-11-26 14:17:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-26 14:18:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-26 14:18:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-26 14:18:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Неверное количество столбцов
+Column count does not match; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, car_id, is_approved)VALUES ('2019-06-10', '2019-07-10', 2, 0, 1, false) [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at persestance.DBUtils.executeQuery(DBUtils.java:71)
+	at persestance.DBContractsStore.add(DBContractsStore.java:30)
+	at service.ContractService.addContract(ContractService.java:30)
+	at View.ContractView.addContract(ContractView.java:82)
+	at View.ClientPanel.addContract(ClientPanel.java:26)
+	at View.MainMenu.show(MainMenu.java:129)
+	at View.MainMenu.show(MainMenu.java:89)
+	at Main.main(Main.java:6)
+2019-11-26 14:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-26 14:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-26 14:19:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO CONTRACTS(CREATED_AT, ENDS_AT, CLIENT_ID, ADMIN_ID CAR_ID[*], IS_APPROVED)VALUES ('2019-06-10', '2019-07-10', 3, 0, 1, FALSE)"; ожидалось ",, )"
+Syntax error in SQL statement "INSERT INTO CONTRACTS(CREATED_AT, ENDS_AT, CLIENT_ID, ADMIN_ID CAR_ID[*], IS_APPROVED)VALUES ('2019-06-10', '2019-07-10', 3, 0, 1, FALSE)"; expected ",, )"; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id car_id, is_approved)VALUES ('2019-06-10', '2019-07-10', 3, 0, 1, false) [42001-200]
+2019-11-26 14:20:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-26 14:20:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" уже существует
+Table "CARS" already exists; SQL statement:
+CREATE TABLE cars (id INT NOT NULL PRIMARY KEY auto_increment, brand VARCHAR (100) NOT NULL,info VARCHAR (100) NOT NULL,price INT (100) NOT NULL,availability BOOLEAN (100) NOT NULL) [42101-200]
+2019-11-26 14:50:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO CONTRACTS(CREATED_AT, ENDS_AT, CLIENT_ID, ADMIN_ID, CAR_ID, IS_APPROVED)VALUES ('private Mapper<Contract> createMapper() {
+        Mapper a = new Mapper<Contract>() {
+            @Override
+            public List<Contract> foo(ResultSet resultSet) {
+                List<Contract> result = new ArrayList<>();
+                try {
+                    while (resultSet.next()) {
+                        Long id = resultSet.getLong(""id"");
+                        String createdAt = resultSet.getString(""created_at"");
+                        String endsAt = resultSet.getString(""ends_at"");
+                        Long clientId = resultSet.getLong(""client_id"");
+
+                        Long carId = resultSet.getLong(""car_id"");
+                        Boolean isApproved = resultSet.getBoolean(""is_approved"");
+
+                        Contract contract = new Contract(id, createdAt, endsAt, clientId, new Car(carId), isApproved);
+                        result.add(contract);
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+                return result;
+            }
+        };
+        return a;
+    }
+
+    //оптимизировать - DB в независимости от домена создаёт connection
+    @Override
+    public List<Contract> getAll() {
+         Mapper a = createMapper();
+
+        return DBUtils.executeSelectQuery(""select * from contracts"", a);
+    }
+
+
+    public List<Contract> getApprovedContracts() {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery(""select * from contracts where is_approved = true"", a);
+    }
+
+    public List<Contract> getNotApprovedContracts() {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery(""select * from contracts where is_approved = false"", a);
+    }
+
+    public List<Contract> getApprovedContractsForClient(Long client_id) {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery(""select * from contracts where is_approved = true and client_id=""+client_id.toString(), a);
+    }
+
+    public List<Contract> getNotApprovedContractsForClient(Long client_id) {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery(""select * from contracts where is_approved = false and client_id=""+client_id.toString(), a);
+    }
+
+    public boolean approveContract(Long contract_id, User user) {
+        return DBUtils.executeQuery(""UPDATE contracts set admin_id='"" + user.getId().toString()
+            + ""[*]', is+approved=true""+
+          "" where id like "" + contract_id);
+    }2019-07-09', '2019-10-09', 2, 0, 1, FALSE)"; ожидалось "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO CONTRACTS(CREATED_AT, ENDS_AT, CLIENT_ID, ADMIN_ID, CAR_ID, IS_APPROVED)VALUES ('private Mapper<Contract> createMapper() {
+        Mapper a = new Mapper<Contract>() {
+            @Override
+            public List<Contract> foo(ResultSet resultSet) {
+                List<Contract> result = new ArrayList<>();
+                try {
+                    while (resultSet.next()) {
+                        Long id = resultSet.getLong(""id"");
+                        String createdAt = resultSet.getString(""created_at"");
+                        String endsAt = resultSet.getString(""ends_at"");
+                        Long clientId = resultSet.getLong(""client_id"");
+
+                        Long carId = resultSet.getLong(""car_id"");
+                        Boolean isApproved = resultSet.getBoolean(""is_approved"");
+
+                        Contract contract = new Contract(id, createdAt, endsAt, clientId, new Car(carId), isApproved);
+                        result.add(contract);
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+                return result;
+            }
+        };
+        return a;
+    }
+
+    //оптимизировать - DB в независимости от домена создаёт connection
+    @Override
+    public List<Contract> getAll() {
+         Mapper a = createMapper();
+
+        return DBUtils.executeSelectQuery(""select * from contracts"", a);
+    }
+
+
+    public List<Contract> getApprovedContracts() {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery(""select * from contracts where is_approved = true"", a);
+    }
+
+    public List<Contract> getNotApprovedContracts() {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery(""select * from contracts where is_approved = false"", a);
+    }
+
+    public List<Contract> getApprovedContractsForClient(Long client_id) {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery(""select * from contracts where is_approved = true and client_id=""+client_id.toString(), a);
+    }
+
+    public List<Contract> getNotApprovedContractsForClient(Long client_id) {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery(""select * from contracts where is_approved = false and client_id=""+client_id.toString(), a);
+    }
+
+    public boolean approveContract(Long contract_id, User user) {
+        return DBUtils.executeQuery(""UPDATE contracts set admin_id='"" + user.getId().toString()
+            + ""[*]', is+approved=true""+
+          "" where id like "" + contract_id);
+    }2019-07-09', '2019-10-09', 2, 0, 1, FALSE)"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO contracts(created_at, ends_at, client_id, admin_id, car_id, is_approved)VALUES ('private Mapper<Contract> createMapper() {
+        Mapper a = new Mapper<Contract>() {
+            @Override
+            public List<Contract> foo(ResultSet resultSet) {
+                List<Contract> result = new ArrayList<>();
+                try {
+                    while (resultSet.next()) {
+                        Long id = resultSet.getLong("id");
+                        String createdAt = resultSet.getString("created_at");
+                        String endsAt = resultSet.getString("ends_at");
+                        Long clientId = resultSet.getLong("client_id");
+
+                        Long carId = resultSet.getLong("car_id");
+                        Boolean isApproved = resultSet.getBoolean("is_approved");
+
+                        Contract contract = new Contract(id, createdAt, endsAt, clientId, new Car(carId), isApproved);
+                        result.add(contract);
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+                return result;
+            }
+        };
+        return a;
+    }
+
+    //оптимизировать - DB в независимости от домена создаёт connection
+    @Override
+    public List<Contract> getAll() {
+         Mapper a = createMapper();
+
+        return DBUtils.executeSelectQuery("select * from contracts", a);
+    }
+
+
+    public List<Contract> getApprovedContracts() {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery("select * from contracts where is_approved = true", a);
+    }
+
+    public List<Contract> getNotApprovedContracts() {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery("select * from contracts where is_approved = false", a);
+    }
+
+    public List<Contract> getApprovedContractsForClient(Long client_id) {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery("select * from contracts where is_approved = true and client_id="+client_id.toString(), a);
+    }
+
+    public List<Contract> getNotApprovedContractsForClient(Long client_id) {
+        Mapper a = createMapper();
+        return DBUtils.executeSelectQuery("select * from contracts where is_approved = false and client_id="+client_id.toString(), a);
+    }
+
+    public boolean approveContract(Long contract_id, User user) {
+        return DBUtils.executeQuery("UPDATE contracts set admin_id='" + user.getId().toString()
+            + "', is+approved=true"+
+          " where id like " + contract_id);
+    }2019-07-09', '2019-10-09', 2, 0, 1, false) [42001-200]
+2019-11-26 15:13:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE CONTRACTS SET ADMIN_ID='1', IS[*]+APPROVED=TRUE WHERE ID LIKE 1"; ожидалось "identifier"
+Syntax error in SQL statement "UPDATE CONTRACTS SET ADMIN_ID='1', IS[*]+APPROVED=TRUE WHERE ID LIKE 1"; expected "identifier"; SQL statement:
+UPDATE contracts set admin_id='1', is+approved=true where id like 1 [42001-200]
+2019-11-26 19:15:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "isAvailable" не найден
+Column "isAvailable" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3169)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getObject(JdbcResultSet.java:535)
+	at persestance.DBAutoPark.getAllElements(DBAutoPark.java:43)
+	at service.AutoparkService.getCars(AutoparkService.java:13)
+	at View.AutoParkView.showCars(AutoParkView.java:11)
+	at View.AdminPanel.showCars(AdminPanel.java:11)
+	at View.MainMenu.show(MainMenu.java:46)
+	at Main.main(Main.java:6)
+2019-11-26 19:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "isAvailable" не найден
+Column "isAvailable" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3169)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getObject(JdbcResultSet.java:535)
+	at persestance.DBAutoPark.getAllElements(DBAutoPark.java:43)
+	at service.AutoparkService.getCars(AutoparkService.java:13)
+	at View.AutoParkView.showCars(AutoParkView.java:11)
+	at View.AdminPanel.showCars(AdminPanel.java:11)
+	at View.MainMenu.show(MainMenu.java:46)
+	at Main.main(Main.java:6)
+2019-11-26 19:16:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "is_available" не найден
+Column "is_available" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3169)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getObject(JdbcResultSet.java:535)
+	at persestance.DBAutoPark.getAllElements(DBAutoPark.java:43)
+	at service.AutoparkService.getCars(AutoparkService.java:13)
+	at View.AutoParkView.showCars(AutoParkView.java:11)
+	at View.AdminPanel.showCars(AdminPanel.java:11)
+	at View.MainMenu.show(MainMenu.java:46)
+	at Main.main(Main.java:6)
+2019-11-26 19:20:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "clientID" не найден
+Column "clientID" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3169)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getObject(JdbcResultSet.java:535)
+	at persestance.DBAutoPark.getAllElements(DBAutoPark.java:43)
+	at service.ContractService.getContracts(ContractService.java:17)
+	at View.ContractView.showContracts(ContractView.java:14)
+	at View.AdminPanel.showContracts(AdminPanel.java:34)
+	at View.MainMenu.show(MainMenu.java:75)
+	at Main.main(Main.java:6)
+2019-11-26 19:23:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "car" не найден
+Column "car" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3169)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getObject(JdbcResultSet.java:535)
+	at persestance.DBAutoPark.getAllElements(DBAutoPark.java:43)
+	at service.ContractService.getContracts(ContractService.java:17)
+	at View.ContractView.showContracts(ContractView.java:14)
+	at View.AdminPanel.showContracts(AdminPanel.java:34)
+	at View.MainMenu.show(MainMenu.java:75)
+	at Main.main(Main.java:6)
+2019-11-26 19:23:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "car" не найден
+Column "car" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3169)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getObject(JdbcResultSet.java:535)
+	at persestance.DBAutoPark.getAllElements(DBAutoPark.java:43)
+	at service.ContractService.getContracts(ContractService.java:17)
+	at View.ContractView.showContracts(ContractView.java:14)
+	at View.AdminPanel.showContracts(AdminPanel.java:34)
+	at View.MainMenu.show(MainMenu.java:75)
+	at Main.main(Main.java:6)
